@@ -25,7 +25,7 @@ If you want to  edit or see the Unity project use:<br>
 Use the Button on the screen to manage your UI.<br>
 * __Start Game__: will start the game.<br>
 * __Setting__: will open the setting menu with the sound slider.<br>
-* __Pause Game__: will pause the damge.<br>
+* __Pause Game__: will pause the game.<br>
 * __Quit Game__: will close the application.<br>
 * __DropDown__: on the Main Menu will set the starting Difficulty.<br>
 
