@@ -32,7 +32,7 @@ Challenge your math skills and try to get the highest score ever as fast as you 
  <dd>
 
 If you want to play on PC run RainDrop.exe file inside RaindropBuild.<br>
-if you want to play on Web Browser click here to play on itch.io.<br>
+If you want to play on Web Browser click here to play on itch.io.<br>
 If you want to edit or see the Unity project use **Unity 2022.3.18f1** (or greater)<br>
 
  </dd>
