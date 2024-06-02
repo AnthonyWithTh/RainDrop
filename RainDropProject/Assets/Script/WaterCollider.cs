@@ -1,12 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class WaterCollider : MonoBehaviour
 {
     [SerializeField] private float horizontalSpeed = 1.0f;
+    [SerializeField] private float raiseSpeed = 5.0f;
     [SerializeField] private float waterAmplitude = 1.0f;
     [SerializeField] private float waterIncreaseHeight = 1.0f;
+
+    private TilemapCollider2D tilemapCollider;
+
+    private void Awake()
+    {
+        tilemapCollider = GetComponentInChildren<TilemapCollider2D>();
+    }
 
     private void OnEnable()
     {
@@ -51,8 +61,24 @@ public class WaterCollider : MonoBehaviour
     {
         if (collision.gameObject.tag == "rainDrop")
         {
-            gameObject.transform.position = new Vector3(0, gameObject.transform.position.y + waterIncreaseHeight, 0);
+            tilemapCollider.enabled = false;
             EventManager.Instance.Publish("OnDropCollision", collision.gameObject);
+            StartCoroutine(RaiseLevel());
         }
+    }
+
+    private IEnumerator RaiseLevel()
+    {
+        Vector3 nextPosition = new Vector3(0, gameObject.transform.position.y + waterIncreaseHeight, 0);
+
+        while (gameObject.transform.position.y < nextPosition.y)
+        {
+            gameObject.transform.position = new Vector3(0, gameObject.transform.position.y + (Time.deltaTime * raiseSpeed), 0);
+            yield return new WaitForEndOfFrame();
+        }
+
+        gameObject.transform.position = nextPosition;
+        tilemapCollider.enabled = true;
+        yield return null;
     }
 }

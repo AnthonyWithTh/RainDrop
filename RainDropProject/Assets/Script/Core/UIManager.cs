@@ -275,4 +275,9 @@ public class UIManager : MonoBehaviour
         settingUI.SetActive(false);
         activeMenu.SetActive(true);
     }
+
+    public void CloseGame()
+    {
+        Application.Quit();
+    }
 }
