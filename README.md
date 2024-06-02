@@ -1,7 +1,7 @@
 [![Made with Unity](https://img.shields.io/badge/Made%20with-Unity-57b9d3.svg?style=flat&logo=unity)](https://www.unity.com)
 [![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://github.com/AnthonyWithTh/RainDrop)
 
-<h1>Raindrops</h1>
+<h1>RainDrop</h1>
 
 - **Genre:** Quiz<br />
 - **Team Size:** 1<br />
