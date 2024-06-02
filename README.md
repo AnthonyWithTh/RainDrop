@@ -3,7 +3,7 @@
 
 <h1>RainDrop</h1>
 
-- **Genre:** Quiz<br />
+- **Genre:** Quiz - Educational<br />
 - **Team Size:** 1<br />
 - **Duration:** March 2024<br />
 - **Platform:** PC - Web Browser <br />
